@@ -1,5 +1,5 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react'
-import { RiSearchLine } from 'react-icons/ri'
+import { Flex, Text, Input, Icon, HStack } from '@chakra-ui/react'
+import { RiNotificationLine, RiSearchLine, RiUserAddFill } from 'react-icons/ri'
 
 export function Header() {
     return (
@@ -53,6 +53,17 @@ export function Header() {
                 
                 <Icon as={ RiSearchLine } fontSize="20"/>
             </Flex>
+
+            <Flex 
+                align="center"
+                ml="auto"
+            >
+                <HStack spacing="4">
+                    <Icon as={RiNotificationLine} fontSize="20" />
+                    <Icon as={RiUserAddFill} fontSize="20" />
+                </HStack>
+            </Flex>
+
         </Flex>
     )
 }
